@@ -36,7 +36,7 @@
 <meta property="og:image" content="http://7xkto4.com1.z0.glb.clouddn.com/blog域名登陆.png">
 <meta property="og:image" content="http://7xkto4.com1.z0.glb.clouddn.com/blog域名设置.png">
 <meta property="og:image" content="http://7xkto4.com1.z0.glb.clouddn.com/blog域名解析.png">
-<meta property="og:updated_time" content="2015-08-04T09:56:35.081Z">
+<meta property="og:updated_time" content="2015-08-05T04:19:00.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github+hexo+jacman搭建个人博客">
 <meta name="twitter:description" content="对于博客，我想很多人并不陌生。发表自己的学习心得，记录自己的新路里程，与他人分享知识，这是有那么多人热烈追求博客的原因。那么，你有没有想过有一天搭建自己的博客呢？如果想，那么有没有想过该怎么实现？注册网易博客、CSDN博客还是博客园？可是这些博客除了内容以外，其他的一切都不由自己控制，有时打开一篇博客，差不多大半页的都是广告。如此一来，极大地影响了阅读者的阅读兴趣。如果自己买空间，自己写代码搭建博">
@@ -167,6 +167,7 @@
 <p>如此配置之后，每次新建文章后，就可以不用手动添加categories标签了，自动生成。</p>
 <h3 id="微博秀">微博秀</h3><p>想要开启微博秀，首先在主题的配置文件（也就是jacman目录下的_config.yml文件）里的“widgets”标签下添加一个“weibo”这样的值，如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">widgets: </span><br><span class="line">- category</span><br><span class="line">- tag</span><br><span class="line"><span class="comment">#- links</span></span><br><span class="line">- douban</span><br><span class="line"><span class="comment">#- tagcloud</span></span><br><span class="line"><span class="comment">#- rss</span></span><br><span class="line">- weibo</span><br></pre></td></tr></table></figure></p>
 <p>要注意的是，每次你想要使用什么控件，首先得在“widgets”标签下仿照上面的格式添加控件的名称。至于你可以添加哪些控件，可以看配置文件里面的注释。（就是“#”号后面的内容）<br>你在设置了微博秀之后，如果想在本地访问效果是不行的。必须先将博客上传到github之后通过网址访问。</p>
+<p><strong>补充注意：</strong><br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的博客底部有我的微博主页的链接，这个是怎么做的呢？在主题的配置文件里面，有一个”author“标签，这个标签下有很多的配置项，你可以任意配置（按照它的提示，把你的链接地址写上去）。但是，它的关于微博的提示写得有问题，问题在于，现在的微博主页，不再是微博域名的后面加上自己的微博<span class="property">id</span>就可以了，而是还得加上一个“u/”。所以，你在“weibo”的冒号后面应该填上“u/your_id”。其中，your_id是你的微博的<span class="property">id</span>，怎么看自己的<span class="property">id</span>呢？进入你的微博主页，地址栏中，“u/”后面的那一串数字就是你的微博<span class="property">id</span>了。</span><br></pre></td></tr></table></figure></p>
 <h3 id="主页显示文章的部分内容">主页显示文章的部分内容</h3><p>默认主页的文章显示采用的是“文章展开式”，就是全部展开文章的内容，如果你想首页只是展开文章的一部分内容，可以在文章中的某个位置插入这样一行代码：<code>&lt;!--more--&gt;</code>。这样一来，在主页中，此标签以下的内容会被隐藏，取而代之的是“阅读全文”按钮。默认并不是“阅读全文”这几个字，你可以在主题的配置文件里自己设置，在“index”标签下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index:</span><br><span class="line">  expand: <span class="literal">true</span></span><br><span class="line">  excerpt_link: 阅读全文  //在 这里修改</span><br></pre></td></tr></table></figure></p>
 <h3 id="主题图片">主题图片</h3><p>默认的jacman主题的主题图片用的是黑桃，你可以随便替换。我先给大家介绍一下配置文件里每一种标签值对应的是设置主题的什么图片。</p>
 <blockquote>
